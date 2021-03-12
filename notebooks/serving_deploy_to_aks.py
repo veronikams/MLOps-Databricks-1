@@ -27,15 +27,15 @@ import azureml
 from azureml.core import Workspace
 from azureml.core.authentication import ServicePrincipalAuthentication
 
-workspace_name = dbutils.secrets.get(scope = "azureml", key = "workspace_name")
+workspace_name = dbutils.secrets.get(scope = "azuremlvz", key = "workspace_name")
 workspace_location = "westeurope"
-resource_group = dbutils.secrets.get(scope = "azureml", key = "resource_group")
-subscription_id = dbutils.secrets.get(scope = "azureml", key = "subscription_id")
+resource_group = dbutils.secrets.get(scope = "azuremlvz", key = "resource_group")
+subscription_id = dbutils.secrets.get(scope = "azuremlvz", key = "subscription_id")
 
 svc_pr = ServicePrincipalAuthentication(
-    tenant_id = dbutils.secrets.get(scope = "azureml", key = "tenant_id"),
-    service_principal_id = dbutils.secrets.get(scope = "azureml", key = "client_id"),
-    service_principal_password = dbutils.secrets.get(scope = "azureml", key = "client_secret"))
+    tenant_id = dbutils.secrets.get(scope = "azuremlvz", key = "tenant_id"),
+    service_principal_id = dbutils.secrets.get(scope = "azuremlvz", key = "client_id"),
+    service_principal_password = dbutils.secrets.get(scope = "azuremlvz", key = "client_secret"))
 
 workspace = Workspace.create(name = workspace_name,
                              location = workspace_location,
