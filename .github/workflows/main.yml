@@ -1,6 +1,9 @@
 name: Wine Quality Machine Learning Pipeline
+  
+on:
+  workflow_dispatch:
+  push:
 
-on: [push]
 #  push:
 #    branches:    
 #      - master
